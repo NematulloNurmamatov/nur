@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react';
 import { GithubOutlined, LinkOutlined, SearchOutlined } from '@ant-design/icons';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 // Import local images
-import EcommerceImage from '@/src/assets/img/e-commerce.jpg';
-import PortfolioImage from '@/src/assets/img/e-commerce.jpg';
-import TaskAppImage from '@/src/assets/img/e-commerce.jpg';
-import RestaurantImage from '@/src/assets/img/e-commerce.jpg';
+import EcommerceImage from '@/public/images/ecommerce.jpg';
+import PortfolioImage from '@/public/images/portfolio.jpg';
+import TaskAppImage from '@/public/images/taskapp.jpg';
+import RestaurantImage from '@/public/images/restaurant.jpg';
 
 interface Project {
     id: number;
@@ -18,7 +18,7 @@ interface Project {
     category: string;
     github: string;
     live: string;
-    image: StaticImageData | string;
+    image: StaticImageData | string; // Now properly typed
 }
 
 const projectsData: Project[] = [
